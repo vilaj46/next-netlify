@@ -5,7 +5,7 @@ const CMS = dynamic(
   () =>
     import("netlify-cms-app").then((cms) => {
       cms.registerPreviewStyle(
-        "https://unpkg.com/tailwindcss@^3.0.9/dist/tailwind.min.css"
+        "https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
       );
       cms.init({ config });
     }),

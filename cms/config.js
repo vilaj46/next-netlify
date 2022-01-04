@@ -14,28 +14,21 @@ export default {
       label_singular: "Page",
       description: "Regular pages.",
       create: true,
-      files: [
+      fields: [
         {
-          label: "Home",
-          name: "home",
-          file: "content/pages/home.md",
-          fields: [
-            {
-              label: "Page Title",
-              name: "page_title",
-              widget: "string",
-            },
-            {
-              label: "Page Url",
-              name: "page_url",
-              widget: "string",
-            },
-            {
-              label: "Page Description",
-              name: "page_description",
-              widget: "markdown",
-            },
-          ],
+          label: "Page Title",
+          name: "page_title",
+          widget: "string",
+        },
+        {
+          label: "Page Url",
+          name: "page_url",
+          widget: "string",
+        },
+        {
+          label: "Page Description",
+          name: "page_description",
+          widget: "markdown",
         },
       ],
     },
