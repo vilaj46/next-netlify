@@ -13,7 +13,7 @@ export default {
       label: "Pages",
       label_singular: "Page",
       description: "Regular pages.",
-      folder: "pages",
+      folder: "content/pages",
       create: true,
       slug: "{{fields.slug}}",
       fields: [

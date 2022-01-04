@@ -1,28 +1,40 @@
-import getAllPages from "./api/getAllPages";
-import findDataBySlug from "./api/findDataBySlug";
+import "tailwindcss/tailwind.css";
 
-/**
- * Change information in the Header
- *
- * Errors on the admin panel.
- */
-export default function Home(props) {
-  console.log(props);
+import { getMarkdownData } from "./api/staticPropsAPI";
+
+import { getAll } from "./api/staticPropsAPI";
+
+// https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
+// https://github.com/vercel/next.js/blob/canary/examples/blog-starter/pages/index.js
+
+const HomePage = ({ pages }) => {
   return (
-    <div>
-      <p className="text-xs">Hey</p>
-      <p className="text-xl">Hey</p>
-    </div>
+    <>
+      <h1>Main Page</h1>
+      {/* <ul>
+        {posts.map((post, index) => {
+          return (
+            <li key={index}>
+              <Link href={`/posts/${post.slug}`}>
+                <a>{post.post_title}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul> */}
+    </>
   );
-}
+};
 
-export async function getStaticProps(context) {
-  const pages = getAllPages();
-  const homePage = findDataBySlug("home", pages);
-
+export const getStaticProps = async (context) => {
+  const pages = getAll("pages");
+  const data = await getMarkdownData(context, "pages");
   return {
     props: {
-      ...homePage,
-    }, // will be passed to the page component as props
+      pages,
+      data,
+    },
   };
-}
+};
+
+export default HomePage;

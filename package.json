@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "jsdom": "^19.0.0",
+    "net": "^1.0.2",
     "netlify-cms-app": "^2.15.63",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "tls": "^0.0.1",
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
