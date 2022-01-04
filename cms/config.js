@@ -13,22 +13,30 @@ export default {
       label: "Pages",
       label_singular: "Page",
       description: "Regular pages.",
+      folder: "pages",
       create: true,
+      slug: "{{fields.slug}}",
       fields: [
         {
           label: "Page Title",
-          name: "page_title",
+          name: "pageTitle",
           widget: "string",
         },
         {
-          label: "Page Url",
-          name: "page_url",
-          widget: "string",
-        },
-        {
-          label: "Page Description",
-          name: "page_description",
+          label: "Page Body",
+          name: "pageBody",
           widget: "markdown",
+        },
+        {
+          label: "Slug",
+          name: "slug",
+          required: true,
+          widget: "string",
+          pattern: [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "A slug can have no spaces or special characters",
+          ],
+          hint: ">- The post URL (do not include folder or file extension)",
         },
       ],
     },

@@ -4,6 +4,7 @@ import findDataBySlug from "./api/findDataBySlug";
 /**
  * Change information in the Header
  *
+ * Errors on the admin panel.
  */
 export default function Home(props) {
   console.log(props);
