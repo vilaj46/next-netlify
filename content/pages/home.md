@@ -1,8 +1,5 @@
 ---
-pageTitle: Page Title
-pageBody: |-
-  Page Body
-
-  <p class="text-xl" data-reactroot="">EXTRA LARGE TEXT</p>
+pageTitle: Award-Winning Bed & Breakfast in Saratoga Springs, New York
+pageBody: body
 slug: home
 ---
