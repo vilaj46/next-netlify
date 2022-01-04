@@ -1,10 +1,12 @@
 import getAllPages from "./api/getAllPages";
+import findDataBySlug from "./api/findDataBySlug";
 
 /**
  * Change information in the Header
  *
  */
-export default function Home() {
+export default function Home(props) {
+  console.log(props);
   return (
     <div>
       <p className="text-xs">Hey</p>
@@ -15,8 +17,11 @@ export default function Home() {
 
 export async function getStaticProps(context) {
   const pages = getAllPages();
-  console.log(pages);
+  const homePage = findDataBySlug("home", pages);
+
   return {
-    props: {}, // will be passed to the page component as props
+    props: {
+      ...homePage,
+    }, // will be passed to the page component as props
   };
 }

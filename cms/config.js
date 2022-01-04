@@ -11,6 +11,10 @@ export default {
     {
       name: "pages",
       label: "Pages",
+      label_singular: "Page",
+      description: "Regular pages.",
+      create: true,
+      folder: "content/pages",
       files: [
         {
           label: "Home",
@@ -23,8 +27,13 @@ export default {
               widget: "string",
             },
             {
+              label: "Page Url",
+              name: "page_url",
+              widget: "string",
+            },
+            {
               label: "Page Description",
-              name: "Page_description",
+              name: "page_description",
               widget: "markdown",
             },
           ],
