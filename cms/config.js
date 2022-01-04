@@ -18,13 +18,13 @@ export default {
           file: "content/pages/home.md",
           fields: [
             {
-              label: "Hero Title",
-              name: "hero_title",
+              label: "Page Title",
+              name: "page_title",
               widget: "string",
             },
             {
-              label: "Hero Description",
-              name: "hero_description",
+              label: "Page Description",
+              name: "Page_description",
               widget: "markdown",
             },
           ],
