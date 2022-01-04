@@ -14,7 +14,7 @@ export default {
       label_singular: "Page",
       description: "Regular pages.",
       create: true,
-      folder: "content/pages",
+      folder: "pages",
       files: [
         {
           label: "Home",
