@@ -1,4 +1,5 @@
 ---
+mainImage: img/union-gables-inn_exterior_01.jpg
 pageTitle: Home
 pageBody: Experience old world hospitality at its finest at Union Gables Inn,
   our luxurious bed and breakfast in Saratoga Springs, New York. Built circa
