@@ -6,7 +6,10 @@ import randomNumber from "../pages/api/randomNumber";
 export function RedLinkDomestic({ children, href }) {
   return (
     <Link href={href}>
-      <a className="text-darkRed font-bold hover:text-lightRed underline">
+      <a
+        className="text-darkRed font-bold hover:text-lightRed underline"
+        style={{ color: "#AA4465" }}
+      >
         {children}
       </a>
     </Link>
@@ -20,6 +23,7 @@ export function RedLinkForeign({ children, href }) {
       target="_blank"
       rel="noreferrer noopener"
       className="text-darkRed font-bold hover:text-lightRed underline"
+      style={{ color: "#AA4465" }}
     >
       {children}
     </a>

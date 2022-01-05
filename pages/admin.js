@@ -17,7 +17,12 @@ const CMS = dynamic(
     }),
   { ssr: false, loading: () => <p>Loading...</p> }
 );
+
 const AdminPage = () => {
-  return <CMS />;
+  return (
+    <div>
+      <CMS />;
+    </div>
+  );
 };
 export default AdminPage;

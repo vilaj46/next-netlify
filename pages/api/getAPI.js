@@ -1,17 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-const pagesDirectory = join(process.cwd(), "/content/pages");
-const postsDirectory = join(process.cwd(), "/content/pages/posts\\[id]");
+import { PAGES_DIRECTORY } from "../apiHelpers/directories";
+// const pagesDirectory = join(process.cwd(), "/content/pages");
+// const postsDirectory = join(process.cwd(), "/content/pages/posts\\[id]");
 
-/**
- * @param {String} first
- * @param {String} second
- * @returns adds two strings together.
- */
-function join(first, second) {
-  return first + second;
-}
+import join from "../apiHelpers/join";
 
 /**
  * Helper function which reads a local directory
@@ -36,16 +30,14 @@ export function getMarkdownFilesInDirectory(directory) {
 export function getMarkdownBySlug(slug, directory) {
   const realSlug = slug.replace(/\.md$/, "");
 
-  if (directory === "pagesDirectory") {
-    directory = pagesDirectory;
-  } else {
-    directory = postsDirectory;
+  try {
+    const fullPath = join(PAGES_DIRECTORY, `/${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+    return data;
+  } catch {
+    // File does not exist.
   }
-
-  const fullPath = join(directory, `/${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data } = matter(fileContents);
-  return data;
 }
 
 /**

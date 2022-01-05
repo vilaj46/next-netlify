@@ -1,39 +1,36 @@
 import "tailwindcss/tailwind.css";
 
 import { getMarkdownData } from "./api/staticPropsAPI";
+import createComponentsFromMd from "./api/createComponentsFromMd";
 
-import { getAll } from "./api/staticPropsAPI";
+import { PageTitle } from "../components/HeadingComponents";
+import { MainImage } from "../components/ImageComponents";
+import { CenterContainer } from "../components/ContainerComponents";
 
 // https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
 // https://github.com/vercel/next.js/blob/canary/examples/blog-starter/pages/index.js
 
-const HomePage = ({ pages }) => {
+const HomePage = (props) => {
+  const { data, pageTitle, mainImage } = props;
+  const components = createComponentsFromMd(data);
+
+  const image = { src: mainImage, alt: "Main Image" };
+
   return (
     <>
-      <h1>Main Page</h1>
-      {/* <ul>
-        {posts.map((post, index) => {
-          return (
-            <li key={index}>
-              <Link href={`/posts/${post.slug}`}>
-                <a>{post.post_title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul> */}
+      <MainImage image={image} />
+      <CenterContainer>
+        <PageTitle>{pageTitle}</PageTitle>
+        {components.map((comp) => comp)}
+      </CenterContainer>
     </>
   );
 };
 
 export const getStaticProps = async (context) => {
-  const pages = getAll("pages");
   const data = await getMarkdownData(context, "pages");
   return {
-    props: {
-      pages,
-      data,
-    },
+    ...data,
   };
 };
 

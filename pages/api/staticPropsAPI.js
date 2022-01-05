@@ -22,8 +22,8 @@ export async function getMarkdownData(context, type) {
     }
 
     const markdown = getMarkdownBySlug(identifier, "pagesDirectory");
-    const { postBody } = markdown;
-    const data = await markdownToHtml(postBody);
+    const { pageBody } = markdown;
+    const data = await markdownToHtml(pageBody);
 
     return {
       props: {
@@ -33,7 +33,6 @@ export async function getMarkdownData(context, type) {
       },
     };
   } catch (e) {
-    console.log(e);
     return {
       props: {
         loadingError: true,

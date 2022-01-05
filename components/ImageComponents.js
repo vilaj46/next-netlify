@@ -51,3 +51,7 @@ export function TripAdvisor({ src = "", alt = "" }) {
     </div>
   );
 }
+
+export function getImageAlt(img) {
+  console.log(img);
+}

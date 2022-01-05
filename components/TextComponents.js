@@ -22,6 +22,7 @@ export function RegularParagraph({
   return (
     <p
       className={`${marginBottom} ${textAlign} text-base leading-loose font-droid text-lightBlack`}
+      style={{ color: "#3f3f3f" }}
     >
       {children.map((child) => {
         if (typeof child !== "string") {

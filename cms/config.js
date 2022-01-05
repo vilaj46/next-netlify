@@ -18,6 +18,11 @@ export default {
       slug: "{{fields.slug}}",
       fields: [
         {
+          label: "Main Image",
+          name: "mainImage",
+          widget: "image",
+        },
+        {
           label: "Page Title",
           name: "pageTitle",
           widget: "string",
