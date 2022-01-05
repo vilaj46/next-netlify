@@ -1,6 +1,6 @@
 ---
 mainImage: img/union-gables-inn_exterior_01.jpg
-pageTitle: Home
+pageTitle: Award-Winning Bed & Breakfast in Saratoga Springs, New York
 pageBody: Experience old world hospitality at its finest at Union Gables Inn,
   our luxurious bed and breakfast in Saratoga Springs, New York. Built circa
   1901, this Queen Anne Victorian Mansion is located in the heart of Saratoga’s
