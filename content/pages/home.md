@@ -33,5 +33,8 @@ pageBody: >-
 
 
   <!--EndFragment-->
+
+
+  ![Union Gables Inn Saratoga Race Track](img/union-gables-inn_saratoga-springs-racetrack.jpg "Union Gables Inn Saratoga Race Track")
 slug: home
 ---
