@@ -9,5 +9,8 @@ pageBody: >-
 
 
   <!--EndFragment-->
+
+
+  ![Union Gables Garden](img/union-gables-inn_garden_01.jpg "Union Gables Garden")
 slug: home
 ---
