@@ -4,7 +4,7 @@ pageTitle: Union Gables
 pageBody: |-2
   
         <ul>
-          [object Object]
+          <a href=321>123</a>
           bbbbbb
         </ul>
 slug: home
