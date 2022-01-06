@@ -5,6 +5,7 @@ pageBody: |-2
   
         <ul>
           [object Object]
+          bbbbbb
         </ul>
 slug: home
 ---
