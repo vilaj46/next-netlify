@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "tailwindcss/tailwind.css";
-// import colors from "tailwindcss/colors";
+
+// Helper functions
 import markdownToHtml from "../../pages/api/markdownToHtml";
-
-import { PageTitle } from "../../components/HeadingComponents";
-import { MainImage } from "../../components/ImageComponents";
-import { CenterContainer } from "../../components/ContainerComponents";
-
 import createComponentsFromMd from "../../pages/api/createComponentsFromMd";
+
+// Components
+import MainImage from "../../components/Shared/Images/MainImage";
+import PageTitle from "../../components/Shared/Headings/PageTitle";
+import CenterContainer from "../../components/Shared/Containers/CenterContainer";
 
 const HomePreview = (props) => {
   const { entry } = props;
@@ -16,8 +16,8 @@ const HomePreview = (props) => {
   const mainImage = entry.getIn(["data", "mainImage"]);
 
   // State
-  const [loaded, setLoaded] = useState(false);
   const [body, setBody] = useState("");
+  const [loaded, setLoaded] = useState(false);
   const [currHtml, setCurrHtml] = useState(removeFragments(pageBody));
 
   const bodyNoFragments = removeFragments(pageBody);
@@ -42,16 +42,11 @@ const HomePreview = (props) => {
     })();
   }
 
-  const image = {
-    src: mainImage,
-    alt: "Main Image",
-  };
-
   const components = createComponentsFromMd(body.__html);
 
   return (
     <div>
-      <MainImage image={image} />
+      {mainImage !== undefined && <MainImage mainImage={mainImage} />}
       <CenterContainer>
         <PageTitle>{title}</PageTitle>
         {loaded && <div>{components.map((comp) => comp)}</div>}
@@ -62,16 +57,20 @@ const HomePreview = (props) => {
 };
 
 function removeFragments(str) {
-  let temp = str;
-  const end = "<!--EndFragment-->";
-  const start = "<!--StartFragment-->";
+  if (str !== undefined) {
+    let temp = str;
+    const end = "<!--EndFragment-->";
+    const start = "<!--StartFragment-->";
 
-  temp = temp.replace(end, "");
-  temp = temp.replace(start, "");
+    temp = temp.replace(end, "");
+    temp = temp.replace(start, "");
 
-  temp = temp.replace(/\s/g, "");
+    temp = temp.replace(/\s/g, "");
 
-  return temp;
+    return temp;
+  } else {
+    return "";
+  }
 }
 
 async function resolveMarkdown(html, loaded, setBody, setLoaded) {

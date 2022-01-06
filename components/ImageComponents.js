@@ -11,18 +11,18 @@ export function Logo({ image }) {
   );
 }
 
-export function MainImage({ image }) {
-  return (
-    <div className="w-full h-full xl:h-192 overflow-hidden">
-      <img
-        src={image.src}
-        alt={image.alt}
-        // Can probably clean this css up a bit.
-        className="w-full bg-cover bg-center object-cover"
-      />
-    </div>
-  );
-}
+// export function MainImage({ image }) {
+//   return (
+//     <div className="w-full h-full xl:h-192 overflow-hidden">
+//       <img
+//         src={image.src}
+//         alt={image.alt}
+//         // Can probably clean this css up a bit.
+//         className="w-full bg-cover bg-center object-cover"
+//       />
+//     </div>
+//   );
+// }
 
 export function PageSubHalfImage({ src, alt }) {
   return (
@@ -50,8 +50,4 @@ export function TripAdvisor({ src = "", alt = "" }) {
       </a>
     </div>
   );
-}
-
-export function getImageAlt(img) {
-  console.log(img);
 }

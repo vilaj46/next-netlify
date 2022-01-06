@@ -1,31 +1,37 @@
 import "tailwindcss/tailwind.css";
 
+// Helper functions
 import { getMarkdownData } from "./api/staticPropsAPI";
-import createComponentsFromMd from "./api/createComponentsFromMd";
+import createComponentsFromMd from "./api/createComponentsFromMd/index";
 
-import { PageTitle } from "../components/HeadingComponents";
-import { MainImage } from "../components/ImageComponents";
-import { CenterContainer } from "../components/ContainerComponents";
+// Utilities
+import randomKey from "../utilities/randomKey";
 
-// https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
-// https://github.com/vercel/next.js/blob/canary/examples/blog-starter/pages/index.js
+// Components
+import MainImage from "../components/Shared/Images/MainImage";
+import PageTitle from "../components/Shared/Headings/PageTitle";
+import CenterContainer from "../components/Shared/Containers/CenterContainer";
 
 const HomePage = (props) => {
   const { data, pageTitle, mainImage } = props;
   const components = createComponentsFromMd(data);
-
-  const image = { src: mainImage, alt: "Main Image" };
-
   return (
     <>
-      <MainImage image={image} />
+      {mainImage !== undefined && <MainImage mainImage={mainImage} />}
       <CenterContainer>
         <PageTitle>{pageTitle}</PageTitle>
-        {components.map((comp) => comp)}
+        {components.map((comp) => {
+          // return <HigherOrder Component={() => comp} />;
+          return comp;
+        })}
       </CenterContainer>
     </>
   );
 };
+
+function HigherOrder({ Component }) {
+  return <Component key={randomKey()} />;
+}
 
 export const getStaticProps = async (context) => {
   const data = await getMarkdownData(context, "pages");

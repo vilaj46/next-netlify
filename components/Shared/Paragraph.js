@@ -1,5 +1,7 @@
 import "tailwindcss/tailwind.css";
 
+const classes = "text-base leading-loose font-droid text-lightBlack";
+
 /**
  * @param {Array} children -
  * @param {Boolean} smallMargin -
@@ -15,20 +17,23 @@ export function Paragraph({ children, smallMargin = false, center = false }) {
   const marginBottom = smallMargin ? "mb-3" : "mb-14";
 
   const textAlign = center ? "text-center" : "";
+
   return (
-    <p
-      className={`${marginBottom} ${textAlign} text-base leading-loose font-droid text-lightBlack`}
-    >
-      {children.map((child) => {
-        if (typeof child !== "string") {
-          const tempChild = {
-            ...child,
-          };
-          return tempChild;
-        } else {
-          return child;
-        }
-      })}
+    <p className={`${marginBottom} ${textAlign} ${classes}`}>
+      {children.map((child) => child)}
     </p>
   );
 }
+
+// {children.map((child) => {
+//   if (typeof child !== "string") {
+//     const tempChild = {
+//       ...child,
+//     };
+//     return tempChild;
+//   } else {
+//     return child;
+//   }
+// })}
+
+export default Paragraph;

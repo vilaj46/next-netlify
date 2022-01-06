@@ -1,17 +1,17 @@
 import "tailwindcss/tailwind.css";
 
-export function PageTitle({ children }) {
-  return (
-    <h1
-      className="text-lightRed text-4xl text-center 
-      uppercase font-juni mt-14 mb-4
-      "
-      style={{ color: "#aa4465" }}
-    >
-      {children}
-    </h1>
-  );
-}
+// export function PageTitle({ children }) {
+//   return (
+//     <h1
+//       className="text-lightRed text-4xl text-center
+//       uppercase font-juni mt-14 mb-4
+//       "
+//       style={{ color: "#aa4465" }}
+//     >
+//       {children}
+//     </h1>
+//   );
+// }
 
 export function PageSubTitle({ children }) {
   return (

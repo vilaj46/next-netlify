@@ -1,5 +1,4 @@
 const colors = require("tailwindcss/colors");
-const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -7,7 +6,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   // purge: ["./src/**/*.html", "./src/**/*.js"],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       spacing: {

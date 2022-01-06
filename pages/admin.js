@@ -13,6 +13,7 @@ const CMS = dynamic(
       );
       cms.registerEditorComponent(EditorTemplate);
       cms.registerPreviewTemplate("pages", HomePreview);
+      // cms.registerPreviewStyle("../styles/global.css");
       cms.init({ config });
     }),
   { ssr: false, loading: () => <p>Loading...</p> }
