@@ -12,14 +12,20 @@ const classes = "text-base leading-loose font-droid text-lightBlack";
  * the key property is read only, I have to create an all
  * together new component and add the random key.
  */
-export function Paragraph({ children, smallMargin = false, center = false }) {
+export function Paragraph({
+  children,
+  smallMarginBottom = false,
+  smallMarginTop = false,
+  center = false,
+}) {
   // If given smallMargin prop, the next element is also a parapraph.
-  const marginBottom = smallMargin ? "mb-3" : "mb-14";
+  const marginBottom = smallMarginBottom ? "mb-3" : "mb-14";
+  const marginTop = smallMarginTop ? "-mt-12" : "";
 
   const textAlign = center ? "text-center" : "";
 
   return (
-    <p className={`${marginBottom} ${textAlign} ${classes}`}>
+    <p className={`${marginBottom} ${textAlign} ${classes} ${marginTop}`}>
       {children.map((child) => child)}
     </p>
   );

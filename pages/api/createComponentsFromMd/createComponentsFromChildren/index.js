@@ -11,7 +11,6 @@ function createComponentsFromChildren(children) {
   } catch (err) {
     // Children of children or #text.
     const { nodeValue } = children;
-
     if (nodeValue) {
       // #text
       return nodeValue;

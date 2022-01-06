@@ -1,7 +1,8 @@
-import createChildComponent from "./createChildComponent";
+// import createChildComponent from "./createChildComponent";
 import createComponentsFromChildren from "./createComponentsFromChildren";
+import createComponents from "./helpers/createComponents";
 
-import setSkip from "./setSkip";
+// import setSkip from "./setSkip";
 
 function createComponentsFromMd(htmlString) {
   try {
@@ -10,8 +11,10 @@ function createComponentsFromMd(htmlString) {
 
     // Selects the body's children
     const children = Array.from(doc.children[0].children[1].children);
-    const components = createComponentsFromChildren(children);
+    // const components = createComponentsFromChildren(children);
+    const components = createComponents(children);
 
+    // return [];
     return components;
   } catch {
     return [];
