@@ -12,5 +12,17 @@ pageBody: >-
 
 
   ![Union Gables Garden](img/union-gables-inn_garden_01.jpg "Union Gables Garden")
+
+
+  <!--StartFragment-->
+
+
+  Step inside our historic mansion of 118 years, featuring a classic wraparound porch, airy living areas with period antiques, and over one acre of Perennial gardens, fountains, and a seasonal Romanesque-style pool. Included in your stay is a freshly-prepared breakfast from our Cordon Bleu trained chef, homemade baked goods served in the afternoon, and exemplary concierge service.
+
+
+  Stay in one of our **[oversized rooms and suites](https://uniongablesinnus.smartweb-04.bookassist.com/en/lodging-saratoga-springs/)**, all with private bathrooms and each uniquely decorated. Each room at our B&B in Saratoga Springs, NY features a romantic natural gas fireplace, complimentary wireless Intenet, and a variety of period antiques. Designated **[pet friendly](https://uniongablesinnus.smartweb-04.bookassist.com/en/about-us/pet-friendly-hotel-saratoga-springs/)**, extended stay, and rooms with private patios are available.
+
+
+  <!--EndFragment-->
 slug: home
 ---
