@@ -6,7 +6,8 @@ pageBody: |-
   <details>
     <summary>123</summary>
 
-    undefined
+      undefined
+
 
   </details>
 slug: home
