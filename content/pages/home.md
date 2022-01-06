@@ -36,5 +36,23 @@ pageBody: >-
 
 
   ![Union Gables Inn Saratoga Race Track](img/union-gables-inn_saratoga-springs-racetrack.jpg "Union Gables Inn Saratoga Race Track")
+
+
+  <!--StartFragment-->
+
+
+  ## Discover Saratoga Springs
+
+
+  <!--StartFragment-->
+
+
+  Take in all that Saratoga Springs has to offer without the hassle of parking downtown. Rich in history with its array of natural springs, classic architecture, beautiful parks, and boutique shopping, in addition to the excitement of thoroughbred horse races, we invite you to visit:
+
+
+  <!--EndFragment-->
+
+
+  <!--EndFragment-->
 slug: home
 ---
