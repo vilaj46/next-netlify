@@ -9,5 +9,21 @@ pageBody: >-
 
 
   <!--EndFragment-->
+
+
+
+
+  ![Union Gables Inn Garden](img/union-gables-inn_garden_01.jpg "Union Gables Inn Garden")
+
+
+
+
+  <!--StartFragment-->
+
+
+  ### Envision Your Stay
+
+
+  <!--EndFragment-->
 slug: home
 ---
