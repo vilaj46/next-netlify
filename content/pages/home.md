@@ -12,5 +12,14 @@ pageBody: >-
 
 
   ![Union Gables Garden](img/union-gables-inn_garden_01.jpg "Union Gables Garden")
+
+
+  <!--StartFragment-->
+
+
+  ## Envision Your Stay
+
+
+  <!--EndFragment-->
 slug: home
 ---
