@@ -5,7 +5,6 @@ pageBody: |-
   body
 
 
-
-  <ul class="redBallLinks">A</ul>
+        <ul class="redBallLinks">Error 1</ul>
 slug: home
 ---
