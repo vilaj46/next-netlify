@@ -2,7 +2,7 @@
 mainImage: img/union-gables-inn_exterior_01.jpg
 pageTitle: Union Gables
 pageBody: |-
-  body
+  bod
 
 
         <ul class="redBallLinks">Error 1</ul>
