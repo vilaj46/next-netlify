@@ -1,6 +1,11 @@
 ---
 mainImage: img/union-gables-inn_exterior_01.jpg
 pageTitle: Union Gables
-pageBody: body
+pageBody: |-
+  body
+
+
+
+  <ul class="redBallLinks">A</ul>
 slug: home
 ---
